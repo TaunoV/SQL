@@ -1,0 +1,3 @@
+SELECT Manufacturer00, COUNT(*) As total
+FROM Computer_System_DATA
+GROUP BY Manufacturer00;
