@@ -3,8 +3,14 @@ SELECT Manufacturer00, COUNT(*) As total
 FROM Computer_System_DATA
 GROUP BY Manufacturer00;
 
-### Mutiple
+### Multiple
 SELECT OfficeApp00, CompanyName00, ProductVersion00, Architecture00, ProductName00, COUNT(*) As total
 FROM OFFICE_ADDIN_DATA
 GROUP BY OfficeApp00, CompanyName00, ProductVersion00, Architecture00, ProductName00;
+
+### Multiple & Where
+SELECT ProductName00, PackageCode00, ProductVersion00, COUNT(*) As total
+FROM INSTALLED_SOFTWARE_DATA
+WHERE ProductName00 LIKE '%Adobe Reader%'
+GROUP BY ProductName00, PackageCode00, ProductVersion00
 
